@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "mono_font",
+  "version": "${version}",
+  "name": "Mono Font",
+  "description": "Registers a mono font via Server Resource Loader",
+  "authors": [
+    "Mu_guang_138"
+  ],
+  "contact": {
+    "homepage": "https://example.com/",
+    "issues": "https://example.com/",
+    "sources": "https://example.com/"
+  },
+  "license": "GNU Lesser General Public License version 3 (LGPLv3)",
+  "environment": "*",
+  "entrypoints": {
+    "server": [
+      {
+        "adapter": "kotlin",
+        "value": "io.github.mg138.monofont.Main"
+      }
+    ]
+  },
+  "mixins": [
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.5",
+    "fabric": "*",
+    "fabric-language-kotlin": ">=1.7.0+kotlin.1.6.0",
+    "minecraft": "1.17.x",
+    "java": ">=16",
+    "rloader": "1.0.0"
+  }
+}
