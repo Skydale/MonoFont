@@ -3,7 +3,7 @@
   "id": "mono_font",
   "version": "${version}",
   "name": "Mono Font",
-  "description": "Registers a mono font via Server Resource Loader",
+  "description": "Registers a mono font.",
   "authors": [
     "Mu_guang_138"
   ],
@@ -28,8 +28,8 @@
     "fabricloader": ">=0.12.5",
     "fabric": "*",
     "fabric-language-kotlin": ">=1.7.0+kotlin.1.6.0",
-    "minecraft": "1.17.x",
+    "minecraft": "1.18.x",
     "java": ">=16",
-    "rloader": "1.0.0"
+    "polymer": "0.2.0-beta.12+1.18.1"
   }
 }

@@ -1,8 +1,7 @@
 package io.github.mg138.monofont
 
-import io.github.mg138.rloader.resource.ResourceHelper
+import eu.pb4.polymer.api.resourcepack.PolymerRPUtils
 import net.fabricmc.api.DedicatedServerModInitializer
-import net.fabricmc.loader.api.FabricLoader
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 
@@ -10,13 +9,9 @@ import org.apache.logging.log4j.Logger
 object Main : DedicatedServerModInitializer {
     const val modId = "mono_font"
     val logger: Logger = LogManager.getLogger(modId)
-    val fabricLoader = FabricLoader.getInstance()
 
     override fun onInitializeServer() {
-        val font = fabricLoader.getModContainer(modId).get()
-            .getPath("font")
-
-        ResourceHelper.register(font)
+        PolymerRPUtils.addAssetSource(modId)
 
         logger.info("Registered mono font.")
     }

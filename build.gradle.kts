@@ -21,6 +21,7 @@ group = mavenGroup
 minecraft {}
 
 repositories {
+    maven("https://maven.nucleoid.xyz")
     mavenCentral()
 }
 
@@ -41,6 +42,11 @@ dependencies {
 
     val fabricKotlinVersion: String by project
     modImplementation("net.fabricmc:fabric-language-kotlin:$fabricKotlinVersion")
+
+    val polymerVersion: String by project
+    modApi("eu.pb4:polymer:$polymerVersion") {
+        exclude("net.fabricmc.fabric-api")
+    }
 
     compileOnly(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 }
