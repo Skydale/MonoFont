@@ -26,8 +26,6 @@ repositories {
 }
 
 dependencies {
-    implementation("io.vertx:vertx-core:4.2.2")
-
     val minecraftVersion: String by project
     minecraft("com.mojang:minecraft:$minecraftVersion")
 

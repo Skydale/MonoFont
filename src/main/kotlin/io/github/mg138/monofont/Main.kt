@@ -1,7 +1,11 @@
 package io.github.mg138.monofont
 
 import eu.pb4.polymer.api.resourcepack.PolymerRPUtils
+import io.github.mg138.monofont.command.IconTable
 import net.fabricmc.api.DedicatedServerModInitializer
+import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback
+import net.fabricmc.loader.api.FabricLoader
+import net.minecraft.server.command.CommandManager.literal
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 
@@ -12,7 +16,8 @@ object Main : DedicatedServerModInitializer {
 
     override fun onInitializeServer() {
         PolymerRPUtils.addAssetSource(modId)
-
         logger.info("Registered mono font.")
+
+        IconTable.register()
     }
 }
