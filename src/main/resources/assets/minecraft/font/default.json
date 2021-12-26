@@ -1,0 +1,9 @@
+{
+    "providers":[
+        {
+            "type": "legacy_unicode",
+            "sizes": "minecraft:font/ascii_fix.bin",
+            "template": "minecraft:font/ascii.png"
+        }
+    ]
+}
