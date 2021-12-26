@@ -16,8 +16,8 @@ object Main : DedicatedServerModInitializer {
 
     override fun onInitializeServer() {
         PolymerRPUtils.addAssetSource(modId)
-        logger.info("Registered mono font.")
-
         IconTable.register()
+
+        logger.info("Registered mono font.")
     }
 }
